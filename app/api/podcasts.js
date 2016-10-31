@@ -2,6 +2,7 @@ export default function podcasts() {
   return [
     {
       title: "Reply All",
+      feedURL: "http://feeds.gimletmedia.com/hearreplyall",
     },
     {
       title: "Hardcore History",
@@ -21,5 +22,5 @@ export default function podcasts() {
     {
       title: "Startup"
     },
-  ].map(podcast => podcast.title)
+  ]
 }
