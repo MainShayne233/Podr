@@ -14,13 +14,13 @@ import {
   View,
 } from 'react-native';
 
-import IndexTab from './app/components/IndexTab'
-import SearchTab from './app/components/SearchTab'
+import FavoritesTab from './app/components/favorites/FavoritesTab'
+import SearchTab from './app/components/search/SearchTab'
 
 export default class Podr extends Component {
 
   state = {
-    selectedTab: 'index',
+    selectedTab: 'favorites',
     notifCount: 0,
     presses: 0,
   };
@@ -34,14 +34,14 @@ export default class Podr extends Component {
         barTintColor="darkslateblue">
         <TabBarIOS.Item
           systemIcon="favorites"
-          selected={this.state.selectedTab === 'index'}
+          selected={this.state.selectedTab === 'favorites'}
           onPress={() => {
             this.setState({
-              selectedTab: 'index',
+              selectedTab: 'favorites',
               notifCount: this.state.notifCount + 1,
             });
           }}>
-          <IndexTab/>
+          <FavoritesTab/>
         </TabBarIOS.Item>
         <TabBarIOS.Item
           systemIcon="search"

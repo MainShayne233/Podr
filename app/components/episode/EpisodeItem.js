@@ -9,14 +9,10 @@ import {
   View,
 } from 'react-native';
 
-import fetchRSS from '../api/fetchRSS'
-
-export default class PodcastItem extends Component {
+export default class EpisodeItem extends Component {
 
   handlePress() {
-    fetchRSS(this.props.podcast.feedURL).then((res) => {
-      console.log(res)
-    })
+
   }
 
   render() {
@@ -30,7 +26,7 @@ export default class PodcastItem extends Component {
           <Text
             style={styles.text}
             >
-            {this.props.podcast.title}
+            {this.props.episode.title}
           </Text>
         </TouchableOpacity>
       </View>
@@ -45,7 +41,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   text: {
-    fontSize: 30,
+    fontSize: 20,
     borderColor: 'rgb(23, 65, 43)',
   },
 });

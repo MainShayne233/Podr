@@ -9,14 +9,14 @@ import {
   View,
 } from 'react-native';
 
-import PodcastItem from './PodcastItem'
+import PodcastItem from '../podcast/PodcastItem'
 
-import podcasts from '../api/podcasts'
+import podcasts from '../../api/podcasts'
 
-export default class IndexTab extends Component {
+export default class FavoritesIndex extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     this.state = {
       dataSource: ds.cloneWithRows(podcasts()),
@@ -26,6 +26,7 @@ export default class IndexTab extends Component {
   renderPodcastItem(podcast) {
     return (
       <PodcastItem
+        navigator={this.props.navigator}
         podcast={podcast}
       />
     )
@@ -38,7 +39,7 @@ export default class IndexTab extends Component {
         >
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={this.renderPodcastItem}
+          renderRow={this.renderPodcastItem.bind(this)}
         />
       </View>
     )

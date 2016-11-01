@@ -9,7 +9,6 @@ import {
 
 export default class SearchTab extends Component {
 
-
   render() {
     return (
       <View>
