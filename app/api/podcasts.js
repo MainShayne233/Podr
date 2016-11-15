@@ -10,7 +10,7 @@ export default function podcasts() {
     },
     {
       title: "Soft Skills Engineering",
-      feedURL: "http://podcastersroundtable.com/feed/podcast/",
+      feedURL: "https://feeds.feedburner.com/SoftSkillsEngineering",
     },
     {
       title: "Ruby Rogues",

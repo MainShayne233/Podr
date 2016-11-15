@@ -12,7 +12,7 @@ import {
 export default class EpisodeItem extends Component {
 
   handlePress() {
-
+    console.log(this.props)
   }
 
   render() {
